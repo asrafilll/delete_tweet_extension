@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Twitter Delete Helper",
+  "version": "1.0",
+  "description": "Helps automate deletion of tweets",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*", "https://x.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
